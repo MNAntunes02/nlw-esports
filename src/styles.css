@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --main-bg-color: #121214;
+    --second-bg-color: #2A2634;
+}
+
+.panel mat-dialog-container{
+    background-color: var(--second-bg-color);
+    padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .panel mat-dialog-container {
+        padding: 2.5rem/* 40px */;
+    }
+}
+
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Inter, Roboto, sans-serif; 
+    background-color: var(--main-bg-color);
+    background-image: url(./assets/images/fundo.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.panel mat-dialog-content::-webkit-scrollbar-thumb{
+    @apply bg-violet-500 rounded-lg bg-opacity-60;
+}
+
+.panel mat-dialog-content::-webkit-scrollbar{
+    width: 5px;
+}
+
+.style-scroll::-webkit-scrollbar-thumb{
+    @apply bg-violet-500 rounded-lg bg-opacity-60 w-[2px];
+}
+
+.style-scroll::-webkit-scrollbar{
+    width: 5px;
+}
+
+.nlw-grad{
+    background-image: linear-gradient(to right,#9572FC, #43E7AD, #E1D55D);
+}

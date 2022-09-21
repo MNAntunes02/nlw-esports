@@ -1,0 +1,111 @@
+<div class="bg-[#2A2634] p-8 rounded-lg shadow-2xl shadow-black">
+    <div class="grid grid-cols-2">
+        <div>
+            <div class="pb-7">
+                <p class="pb-1">Nome</p>
+                <p class="font-black">Diego Fernandes</p>
+            </div>
+            <div class="pb-7">
+                <p class="pb-1">Tempo de jogo</p>
+                <p class="font-black">2 anos</p>
+            </div>
+        </div>
+        <div class="p-5">
+            <!-- Elos Valorant -->
+            <img *ngIf="idaux == '12'" class="" src="{{ arrEloVal[elo].urlImage }}" alt="">
+            <!-- Elos LOL -->
+            <img *ngIf="idaux == '8'" class="" src="{{ arrEloLol[elo].urlImage }}" alt="">
+            <!-- Elos CS -->
+            <img *ngIf="idaux == '4'" class="" src="{{ arrEloCS[elo].urlImage }}" alt="">
+        </div>
+    </div>
+    <div class="flex">
+        <div class="w-1/2 pb-7">
+            <p class="pb-1">Disponibilidade</p>
+            <p class="font-black">18h - 20h</p>
+        </div>
+        <div class="w-1/2 pb-7">
+            <p class="pb-1">Chamada de áudio?</p>
+            <p class="font-black text-green-400">Sim</p>
+        </div>
+    </div>
+    <div class="w-full flex justify-center pb-7">
+        <div class="flex gap-0.5 font-bold">
+            <div class="cursor-pointer relative">
+                <label for="check-1">
+                    <input  type="checkbox" 
+                            id="check-1" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 w-12 h-12 p-0  rounded-md"
+                            name="week1"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">D</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-2">
+                    <input  type="checkbox" 
+                            id="check-2" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 w-12 h-12 p-0  rounded-md"
+                            name="week2"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">S</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-3">
+                    <input  type="checkbox" 
+                            id="check-3" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 2w-12 h-12 p-0  rounded-md"
+                            name="week3"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">T</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-4">
+                    <input  type="checkbox" 
+                            id="check-4" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 w-12 h-12 p-0  rounded-md"
+                            name="week4"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">Q</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-5">
+                    <input  type="checkbox" 
+                            id="check-5" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 w-12 h-12 p-0  rounded-md"
+                            name="week5"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">Q</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-6">
+                    <input  type="checkbox" 
+                            id="check-6" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 w-12 h-12 p-0  rounded-md"
+                            name="week6"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">S</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-7">
+                    <input  type="checkbox" 
+                            id="check-7" 
+                            class="appearance-none checked:bg-violet-500 bg-zinc-900 w-12 h-12 p-0  rounded-md"
+                            name="week7"
+                            ngModel/>
+                    <p class="absolute left-4 top-3">S</p>
+                </label>
+            </div>
+        </div>
+    </div>
+    <button class="w-full justify-center flex bg-violet-500 hover:bg-violet-700  p-3 px-5 rounded-md lg:gap-3 gap-1 items-center duration-300"
+            (click)="getDuo()">
+        <img class="lg:w-5 w-3" src="../../../assets/images/game-controller.svg" alt=""> 
+        Conectar
+    </button>
+</div>

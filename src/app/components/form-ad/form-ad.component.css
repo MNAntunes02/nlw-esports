@@ -1,0 +1,12 @@
+span{
+    @apply text-white;
+}
+
+.input-custom{
+    @apply w-full bg-zinc-900 p-3 px-4 rounded-md;
+}
+
+
+.ng-invalid.ng-touched:not(#form){
+    @apply ring-2 ring-red-700;
+}

@@ -1,0 +1,144 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ValorantEloService {
+
+  constructor() { }
+
+  getElos(){
+    return [
+      {
+        id: 0,
+        name: 'Unraked',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/0/largeicon.png'
+      },
+      {
+        id: 3,
+        name: 'Ferro I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/3/largeicon.png'
+      },
+      {
+        id: 4,
+        name: 'Ferro II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/4/largeicon.png'
+      },
+      {
+        id: 5,
+        name: 'Ferro III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/5/largeicon.png'
+      },
+      {
+        id: 6,
+        name: 'Bronze I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/6/largeicon.png'
+      },
+      {
+        id: 7,
+        name: 'Bronze II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/7/largeicon.png'
+      },
+      {
+        id: 8,
+        name: 'Bronze III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/8/largeicon.png'
+      },
+      {
+        id: 9,
+        name: 'Prata I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/9/largeicon.png'
+      },
+      {
+        id: 10,
+        name: 'Prata II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/10/largeicon.png'
+      },
+      {
+        id: 11,
+        name: 'Prata III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/11/largeicon.png'
+      },
+      {
+        id: 12,
+        name: 'Ouro I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/12/largeicon.png'
+      },
+      {
+        id: 13,
+        name: 'Ouro II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/13/largeicon.png'
+      },
+      {
+        id: 14,
+        name: 'Ouro III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/14/largeicon.png'
+      },
+      {
+        id: 15,
+        name: 'Platina I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/15/largeicon.png'
+      },
+      {
+        id: 16,
+        name: 'Platina II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/16/largeicon.png'
+      },
+      {
+        id: 17,
+        name: 'Platina III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/17/largeicon.png'
+      },
+      {
+        id: 18,
+        name: 'Diamante I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/18/largeicon.png'
+      },
+      {
+        id: 19,
+        name: 'Diamante II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/19/largeicon.png'
+      },
+      {
+        id: 20,
+        name: 'Diamante III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/20/largeicon.png'
+      },
+      {
+        id: 21,
+        name: 'Ascendente I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/21/largeicon.png'
+      },
+      {
+        id: 22,
+        name: 'Ascendente II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/22/largeicon.png'
+      },
+      {
+        id: 23,
+        name: 'Ascendente III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/23/largeicon.png'
+      },
+      {
+        id: 24,
+        name: 'Imortal I',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/24/largeicon.png'
+      },
+      {
+        id: 25,
+        name: 'Imortal II',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/25/largeicon.png'
+      },
+      {
+        id: 26,
+        name: 'Imortal III',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/26/largeicon.png'
+      },
+      {
+        id: 27,
+        name: 'Radiante',
+        urlImage: 'https://media.valorant-api.com/competitivetiers/03621f52-342b-cf4e-4f86-9350a49c6d04/27/largeicon.png'
+      }
+    ]
+  }
+}

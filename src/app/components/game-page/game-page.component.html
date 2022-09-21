@@ -1,0 +1,23 @@
+<section class="lg:flex block">
+    <div class="lg:w-1/6 w-full mx-auto">
+        <app-logo class="cursor-pointer" routerLink=""></app-logo>
+        <div class="p-4 pt-8 flex justify-center">
+            <img class="rounded-xl" src="{{idaux.urlImage}}" alt="">
+        </div>
+    </div>
+    <div class="lg:w-5/6 w-full lg:pl-8">
+        <div class="lg:h-40 h-32 flex flex-col lg:flex-row items-center lg:text-4xl text-2xl justify-center">
+            <p class="font-black">Conecte ao seu duo de</p><span class="font-black  nlw-grad bg-clip-text text-transparent pl-2">{{ idaux.name }}</span>
+        </div>
+        <div class="w-full grid xl:grid-cols-3 lg:grid-cols-2 gap-5 p-5">
+            <app-card-ad idaux="{{idaux.ad}}" elo="5"></app-card-ad>
+            <app-card-ad idaux="{{idaux.ad}}" elo="7"></app-card-ad>
+            <app-card-ad idaux="{{idaux.ad}}" elo="3"></app-card-ad>
+            <app-card-ad idaux="{{idaux.ad}}" elo="6"></app-card-ad>
+            <app-card-ad idaux="{{idaux.ad}}" elo="2"></app-card-ad>
+            <app-card-ad idaux="{{idaux.ad}}" elo="0"></app-card-ad>
+            <app-card-ad idaux="{{idaux.ad}}" elo="3"></app-card-ad>
+        </div>
+    </div>
+    
+</section>
