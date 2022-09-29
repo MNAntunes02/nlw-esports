@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { Game } from 'src/app/interfaces/game';
 import { ApiGamesService } from 'src/app/services/api-games.service';
 import { FormAdComponent } from '../form-ad/form-ad.component';
 
@@ -10,7 +12,7 @@ import { FormAdComponent } from '../form-ad/form-ad.component';
 })
 export class MainComponent implements OnInit{
 
-  api: any;
+  api$: Observable<Game[]>;
 
   constructor
   (
@@ -18,11 +20,10 @@ export class MainComponent implements OnInit{
     private apiGames: ApiGamesService,
   ) 
   {
-    this.api = this.apiGames.getGames();
+    this.api$ = this.apiGames.getGames();
   }
 
   ngOnInit(): void {
-      // this.openDialog()
   }
 
   openDialog() {

@@ -1,0 +1,18 @@
+@keyframes rotate-a {
+    0%{
+        box-shadow: inset 3px 3px 2px #E1D55D, -3px -3px 2px #E1D55D;
+        transform: rotate(0deg);
+    }
+    50%{
+        box-shadow: inset 3px 3px 2px #9572FC, -3px -3px 2px #9572FC;
+        transform: rotate(180deg);
+    }
+    100%{
+        box-shadow: inset 3px 3px 2px #E1D55D, -3px -3px 2px #E1D55D;
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-a-side{
+    animation: rotate-a 1s linear infinite;
+}

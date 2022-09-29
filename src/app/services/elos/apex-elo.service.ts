@@ -6,9 +6,9 @@ import { Elo } from 'src/app/interfaces/elo';
 @Injectable({
   providedIn: 'root'
 })
-export class LolEloService {
+export class ApexEloService {
 
-  private readonly API = '/assets/jsons/lol-elo.json';
+  private readonly API = '/assets/jsons/apex-elo.json';
 
   constructor(private httpclient: HttpClient) { }
 
@@ -19,4 +19,5 @@ export class LolEloService {
       delay(500),
     );
   }
+
 }

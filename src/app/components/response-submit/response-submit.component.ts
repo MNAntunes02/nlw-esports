@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { FormAdComponent } from '../form-ad/form-ad.component';
 
 @Component({
   selector: 'app-response-submit',
@@ -8,12 +9,15 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ResponseSubmitComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<ResponseSubmitComponent>) { }
+  constructor( 
+                public dialogRef: MatDialogRef<ResponseSubmitComponent>,
+              ) { }
 
   ngOnInit(): void {
   }
 
   onNoClick(): void {
+    // this.dialogRefMain.close();
     this.dialogRef.close();
   }
 

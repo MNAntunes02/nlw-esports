@@ -2,15 +2,17 @@
     <h4 class="font-black lg:text-3xl text-xl pb-8 text-white">Publicar anúncio</h4>
     <form #formAd="ngForm" (ngSubmit)="onSubmit(formAd)" class="text-white lg:text-base text-sm" id="form">
     
-        <div class="w-full pb-4" (click)="resetElos()">
+        <div class="w-full pb-4">
+        <!-- <div class="w-full pb-4" (click)="rollForEnd(carEloVal)"> -->
             <h2 class="font-semibold pb-2">Qual o game?</h2>
             <select class="input-custom"
                     name="game"
                     ngModel
                     required
+                    (click)="resetElos()"
                     #selec>
                 <option class="text-zinc-400" value="" disabled selected>Selecione o game que deseja jogar</option>
-                <option *ngFor="let game of api" value="{{game.name}}">
+                <option *ngFor="let game of api | async" value="{{game.name}}">
                 {{game.name}}
                 </option>
             </select>
@@ -25,7 +27,7 @@
                     ngModel
                     required
                     #nick="ngModel">
-            <div *ngIf="!nick.valid && nick.touched" class="text-red-700 font-semibold text-sm pt-1">Campo nickname obrigatório</div>
+            <div *ngIf="!nick.valid && nick.touched" class="text-red-700 font-semibold text-sm pt-1">Campo nome/nickname obrigatório</div>
             <!-- <div>{{ nick.className }}</div>         -->
         </div>
 
@@ -39,9 +41,9 @@
                         ngModel
                         required
                         pattern=".+#\d{4}"
-                        #discord="ngModel">
-                <div *ngIf="!discord.valid && discord.touched" class="text-red-700 font-semibold text-sm pt-1">Discord inválido!</div>
-                <!-- <div>{{ discord.className }}</div>          -->
+                        #discord="ngModel"
+                        >
+                <div *ngIf="!discord.valid && discord.touched" class="text-red-700 font-semibold text-sm pt-1">Discord inválido!</div>      
             </div>
             <div class="w-1/2">
                 <h2 class="font-semibold  pb-2">Qual horário do dia?</h2>
@@ -113,7 +115,7 @@
                     (click)="nextElo(carEloVal,inEloVal)">
                     <mat-icon>arrow_forward</mat-icon>
                 </div>
-                <div class="text-center py-4 font-semibold select-none" (click)="consoleLog(inEloVal)">{{ arrEloVal[contador].name }}</div>
+                <div class="text-center py-4 font-semibold select-none">{{ arrEloVal[contador].name }}</div>
                 <div    class="grid grid-flow-col overflow-x-hidden overflow-y-hidden gap-5 snap-x snap-mandatory scroll-smooth lg:px-52 px-24" 
                         name="arrElo"
                         ngModel
@@ -212,7 +214,8 @@
             <button class="flex bg-violet-500 hover:bg-violet-700  p-3 px-5 rounded-md lg:gap-3 gap-1 items-center duration-300" 
                     type="submit"
                     [disabled]="!formAd.valid"
-                    [ngClass]="{'bg-violet-500 hover:bg-violet-700': formAd.valid, 'bg-gray-500': !formAd.valid}"
+                    [ngClass]="{'bg-violet-500 hover:bg-violet-700': formAd.valid, 'bg-gray-500 cursor-not-allowed': !formAd.valid}"
+                    [mat-dialog-close]="formAd"
                     > 
                 <img class="lg:w-5 w-3" src="./assets/images/game-controller.svg" alt=""> 
                 Encontrar duo

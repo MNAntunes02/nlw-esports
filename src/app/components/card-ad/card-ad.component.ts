@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiGamesService } from 'src/app/services/api-games.service';
+import { ApexEloService } from 'src/app/services/elos/apex-elo.service';
 import { CsEloService } from 'src/app/services/elos/cs-elo.service';
 import { LolEloService } from 'src/app/services/elos/lol-elo.service';
 import { ValorantEloService } from 'src/app/services/elos/valorant-elo.service';
@@ -16,10 +17,11 @@ export class CardAdComponent implements OnInit {
   @Input() idaux! : string;
   @Input() elo! : string;
 
-  api: any;
+  api$: any;
   arrEloVal:any;
   arrEloLol:any;
   arrEloCS:any;
+  arrEloApex:any;
 
   constructor
   (
@@ -28,11 +30,21 @@ export class CardAdComponent implements OnInit {
     private valorantElos: ValorantEloService,
     private lolElos: LolEloService,
     private csElos: CsEloService,
+    private apexElos: ApexEloService
   ) {
-    this.api = this.apiGames.getGames();
-    this.arrEloVal = this.valorantElos.getElos();
-    this.arrEloLol = this.lolElos.getElos();
-    this.arrEloCS = this.csElos.getElos();
+    this.api$ = this.apiGames.getGames();
+    this.arrEloVal = this.valorantElos.getElos().subscribe(
+      elo => this.arrEloVal = elo
+    );
+    this.arrEloLol = this.lolElos.getElos().subscribe(
+      elo => this.arrEloLol = elo
+    );
+    this.arrEloCS = this.csElos.getElos().subscribe(
+      elo => this.arrEloCS = elo
+    );
+    this.arrEloApex = this.apexElos.getElos().subscribe(
+      elo => this.arrEloApex = elo
+    );
   }
 
   ngOnInit(): void {

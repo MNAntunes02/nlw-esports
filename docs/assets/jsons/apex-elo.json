@@ -1,0 +1,42 @@
+[
+    {
+      "id": 0,
+      "name": "Unranked",
+      "urlImage": "https://cdn.jumpmaster.xyz/ProjectRanked/RankedBadges/Arenas_Unranked.png"
+    },
+    {
+      "id": 1,
+      "name": "Bronze",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/4/45/Ranked_Tier1_Bronze.png"
+    },
+    {
+      "id": 2,
+      "name": "Prata",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/4/4c/Ranked_Tier2_Silver.png"
+    },
+    {
+      "id": 3,
+      "name": "Ouro",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/7/75/Ranked_Tier3_Gold.png"
+    },
+    {
+      "id": 4,
+      "name": "Platina",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/18/Ranked_Tier4_Platinum.png"
+    },
+    {
+      "id": 5,
+      "name": "Diamante",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/1/1e/Ranked_Tier5_Diamond.png"
+    },
+    {
+      "id": 6,
+      "name": "Mestre",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/7/70/Ranked_Tier6_Master.png"
+    },
+    {
+      "id": 7,
+      "name": "Apex Predador",
+      "urlImage": "https://static.wikia.nocookie.net/apexlegends_gamepedia_en/images/4/43/Ranked_Tier7_Apex_Predator.png"
+    }
+  ]

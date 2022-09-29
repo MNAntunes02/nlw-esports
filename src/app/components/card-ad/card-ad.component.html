@@ -10,14 +10,33 @@
                 <p class="font-black">2 anos</p>
             </div>
         </div>
-        <div class="p-5">
+        <div *ngIf="api$ | async as api ; else loading" class="p-2 ">
             <!-- Elos Valorant -->
-            <img *ngIf="idaux == '12'" class="" src="{{ arrEloVal[elo].urlImage }}" alt="">
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="idaux == '12'">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloVal[elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloVal[elo].urlImage }}" alt="">
+            </div>
             <!-- Elos LOL -->
-            <img *ngIf="idaux == '8'" class="" src="{{ arrEloLol[elo].urlImage }}" alt="">
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="idaux == '8'">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloLol[elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloLol[elo].urlImage }}" alt="">
+            </div>
             <!-- Elos CS -->
-            <img *ngIf="idaux == '4'" class="" src="{{ arrEloCS[elo].urlImage }}" alt="">
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="idaux == '4'">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloCS[elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloCS[elo].urlImage }}" alt="">
+            </div>
+            <!-- Elos APEX -->
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="idaux == '3'">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloApex[elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloApex[elo].urlImage }}" alt="">
+            </div>
         </div>
+        <ng-template #loading>
+            <div>
+                <app-loading></app-loading>
+            </div>
+        </ng-template>
     </div>
     <div class="flex">
         <div class="w-1/2 pb-7">
@@ -26,7 +45,11 @@
         </div>
         <div class="w-1/2 pb-7">
             <p class="pb-1">Chamada de áudio?</p>
-            <p class="font-black text-green-400">Sim</p>
+            <p  class="font-black"
+                [ngClass]="{'text-green-400': (voice.innerText == 'Sim'), 'text-red-400': (voice.innerText == 'Não')}"
+                #voice>
+                Sim
+            </p>
         </div>
     </div>
     <div class="w-full flex justify-center pb-7">

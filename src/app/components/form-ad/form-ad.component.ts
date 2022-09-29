@@ -21,6 +21,7 @@ export class FormAdComponent implements OnInit , AfterViewInit {
   @ViewChild('carEloCS') carEloCS! : ElementRef<HTMLDivElement>;
   @ViewChildren('inEloCS') inEloCS! : QueryList<ElementRef<HTMLInputElement>>;
 
+  form: any;
   api: any;
   arrEloVal:any;
   arrEloLol:any;
@@ -47,9 +48,15 @@ export class FormAdComponent implements OnInit , AfterViewInit {
     private csElos: CsEloService,
   ) {
     this.api = this.apiGames.getGames();
-    this.arrEloVal = this.valorantElos.getElos();
-    this.arrEloLol = this.lolElos.getElos();
-    this.arrEloCS = this.csElos.getElos();
+    this.arrEloVal = this.valorantElos.getElos().subscribe(
+      elo => this.arrEloVal = elo
+    );
+    this.arrEloLol = this.lolElos.getElos().subscribe(
+      elo => this.arrEloLol = elo
+    );
+    this.arrEloCS = this.csElos.getElos().subscribe(
+      elo => this.arrEloCS = elo
+    );
   }
   
   ngOnInit(): void {
@@ -66,6 +73,11 @@ export class FormAdComponent implements OnInit , AfterViewInit {
       this.inEloVal.get(0)!.nativeElement.checked = true;
       this.inEloLol.get(0)!.nativeElement.checked = true;
       this.inEloCS.get(0)!.nativeElement.checked = true;
+
+      //Iniciar carrosel
+      // this.carEloVal.nativeElement.scrollBy(-20000,0);
+      // this.carEloLol.nativeElement.scrollBy(-20000,0);
+      // this.carEloCS.nativeElement.scrollBy(-20000,0);
   }
 
   consoleLog(inputsRadio:any){
@@ -82,7 +94,14 @@ export class FormAdComponent implements OnInit , AfterViewInit {
       width: '400px',
       panelClass: 'panel'
     });
-    this.dialogRef.close();
+    // this.dialogRef.afterClosed().subscribe(result => {
+    //   console.log(`Literalmente ${result}`)
+    // });
+    this.dialogRef.beforeClosed().subscribe(result => {
+      console.log(result);
+    })
+    this.dialogRef.close(form);
+    console.log(this.form)
   }
  
   nextElo(carousel:any,inputsRadio:any){
@@ -100,6 +119,7 @@ export class FormAdComponent implements OnInit , AfterViewInit {
       inputsRadio.get(this.contador)!.nativeElement.checked = true;
     }
   }
+
 
 
 }
