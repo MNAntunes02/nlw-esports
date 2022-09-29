@@ -8,7 +8,7 @@ import { Elo } from 'src/app/interfaces/elo';
 })
 export class LolEloService {
 
-  private readonly API = '/assets/jsons/lol-elo.json';
+  private readonly API = './assets/jsons/lol-elo.json';
 
   constructor(private httpclient: HttpClient) { }
 

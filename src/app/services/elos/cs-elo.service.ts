@@ -8,7 +8,7 @@ import { Elo } from 'src/app/interfaces/elo';
 })
 export class CsEloService {
 
-  private readonly API = '/assets/jsons/cs-elo.json';
+  private readonly API = './assets/jsons/cs-elo.json';
 
   constructor(private httpclient: HttpClient) { }
 

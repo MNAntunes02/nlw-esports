@@ -8,7 +8,7 @@ import { Elo } from 'src/app/interfaces/elo';
 })
 export class ValorantEloService {
 
-  private readonly API = '/assets/jsons/valorant-elo.json'
+  private readonly API = './assets/jsons/valorant-elo.json'
 
   constructor(private httpclient: HttpClient) { }
 

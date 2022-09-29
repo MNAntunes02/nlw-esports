@@ -8,7 +8,7 @@ import { Elo } from 'src/app/interfaces/elo';
 })
 export class ApexEloService {
 
-  private readonly API = '/assets/jsons/apex-elo.json';
+  private readonly API = './assets/jsons/apex-elo.json';
 
   constructor(private httpclient: HttpClient) { }
 
