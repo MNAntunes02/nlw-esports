@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { FormAdComponent } from '../form-ad/form-ad.component';
 
 @Component({
   selector: 'app-response-submit',

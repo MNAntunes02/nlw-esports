@@ -15,8 +15,7 @@ export class ApiGamesService {
   getGames(){
     return this.httpclient.get<Game[]>(this.API)
     .pipe(
-      first(),
-      delay(500),
+      first()
     );
   }
 

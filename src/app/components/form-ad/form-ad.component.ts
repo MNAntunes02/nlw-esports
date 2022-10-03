@@ -5,7 +5,7 @@ import { ApiGamesService } from 'src/app/services/api-games.service';
 import { CsEloService } from 'src/app/services/elos/cs-elo.service';
 import { LolEloService } from 'src/app/services/elos/lol-elo.service';
 import { ValorantEloService } from 'src/app/services/elos/valorant-elo.service';
-import { ResponseSubmitComponent } from '../response-submit/response-submit.component';
+import { ResponseSubmitComponent } from 'src/app/response/components/response-submit/response-submit.component'; 
 
 @Component({
   selector: 'app-form-ad',

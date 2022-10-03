@@ -15,8 +15,7 @@ export class CsEloService {
   getElos(){
     return this.httpclient.get<Elo[]>(this.API)
     .pipe(
-      first(),
-      delay(500),
+      first()
     );
   }
 }

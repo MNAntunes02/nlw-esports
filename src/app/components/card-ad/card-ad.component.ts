@@ -5,7 +5,8 @@ import { ApexEloService } from 'src/app/services/elos/apex-elo.service';
 import { CsEloService } from 'src/app/services/elos/cs-elo.service';
 import { LolEloService } from 'src/app/services/elos/lol-elo.service';
 import { ValorantEloService } from 'src/app/services/elos/valorant-elo.service';
-import { ResponseSubmitComponent } from '../response-submit/response-submit.component';
+import { ResponseSubmitComponent } from 'src/app/response/components/response-submit/response-submit.component'; 
+import { ResponseConectComponent } from 'src/app/response/components/response-conect/response-conect.component';
 
 @Component({
   selector: 'app-card-ad',
@@ -52,7 +53,7 @@ export class CardAdComponent implements OnInit {
   }
 
   getDuo(){
-    this.dialog.open(ResponseSubmitComponent, {
+    this.dialog.open(ResponseConectComponent, {
       width: '400px',
       panelClass: 'panel'
     });
