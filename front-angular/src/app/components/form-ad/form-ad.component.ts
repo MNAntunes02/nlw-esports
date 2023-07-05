@@ -7,6 +7,7 @@ import { LolEloService } from 'src/app/services/elos/lol-elo.service';
 import { ValorantEloService } from 'src/app/services/elos/valorant-elo.service';
 import { ResponseSubmitComponent } from 'src/app/response/components/response-submit/response-submit.component'; 
 import { elementAt } from 'rxjs';
+import { DotaEloService } from 'src/app/services/elos/dota-elo.service';
 
 @Component({
   selector: 'app-form-ad',
@@ -21,11 +22,14 @@ export class FormAdComponent implements OnInit , AfterViewInit {
   @ViewChildren('inEloLol') inEloLol! : QueryList<ElementRef<HTMLInputElement>>;
   @ViewChild('carEloCS') carEloCS! : ElementRef<HTMLDivElement>;
   @ViewChildren('inEloCS') inEloCS! : QueryList<ElementRef<HTMLInputElement>>;
+  @ViewChild('carEloDota') carEloDota! : ElementRef<HTMLDivElement>;
+  @ViewChildren('inEloDota') inEloDota! : QueryList<ElementRef<HTMLInputElement>>;
 
   form: any;
   api: any;
   arrEloVal:any;
   arrEloLol:any;
+  arrEloDota:any;
   arrEloCS:any;
   contador:number = 0;
   eloteste:any;
@@ -48,6 +52,7 @@ export class FormAdComponent implements OnInit , AfterViewInit {
     private apiGames: ApiGamesService,
     private valorantElos: ValorantEloService,
     private lolElos: LolEloService,
+    private dotaElos: DotaEloService,
     private csElos: CsEloService,
     private formBuilder: FormBuilder
   ) {
@@ -60,6 +65,9 @@ export class FormAdComponent implements OnInit , AfterViewInit {
     );
     this.arrEloCS = this.csElos.getElos().subscribe(
       elo => this.arrEloCS = elo
+    );
+    this.arrEloDota = this.dotaElos.getElos().subscribe(
+      elo => this.arrEloDota = elo
     );
   }
   

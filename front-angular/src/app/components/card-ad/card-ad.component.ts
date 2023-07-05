@@ -9,6 +9,7 @@ import { ResponseSubmitComponent } from 'src/app/response/components/response-su
 import { ResponseConectComponent } from 'src/app/response/components/response-conect/response-conect.component';
 import { Ad } from 'src/app/interfaces/ad';
 import { UserService } from 'src/app/services/user.service';
+import { DotaEloService } from 'src/app/services/elos/dota-elo.service';
 
 @Component({
   selector: 'app-card-ad',
@@ -48,6 +49,7 @@ export class CardAdComponent implements OnInit {
   arrEloLol:any;
   arrEloCS:any;
   arrEloApex:any;
+  arrEloDota:any;
 
   constructor
   (
@@ -57,6 +59,7 @@ export class CardAdComponent implements OnInit {
     private lolElos: LolEloService,
     private csElos: CsEloService,
     private apexElos: ApexEloService,
+    private dotaElos: DotaEloService,
     private userService : UserService
   ) {
     this.api$ = this.apiGames.getGames();
@@ -71,6 +74,9 @@ export class CardAdComponent implements OnInit {
     );
     this.arrEloApex = this.apexElos.getElos().subscribe(
       elo => this.arrEloApex = elo
+    );
+    this.arrEloApex = this.dotaElos.getElos().subscribe(
+      elo => this.arrEloDota = elo
     );
   }
 
