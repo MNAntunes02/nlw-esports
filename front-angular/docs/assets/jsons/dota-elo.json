@@ -1,0 +1,57 @@
+[
+    {
+      "id": 0,
+      "name": "Unranked",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e7/SeasonalRank0-0.png"
+    },
+    {
+      "id": 1,
+      "name": "Arauto",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/85/SeasonalRank1-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Guardião",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/c/c7/SeasonalRank2-1.png"
+    },
+    {
+      "id": 3,
+      "name": "Cruzado",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/82/SeasonalRank3-1.png"
+    },
+    {
+      "id": 4,
+      "name": "Arconte",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/76/SeasonalRank4-1.png"
+    },
+    {
+      "id": 5,
+      "name": "Lenda",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/7/79/SeasonalRank5-1.png"
+    },
+    {
+      "id": 6,
+      "name": "Ancestral",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/e/e0/SeasonalRank6-1.png"
+    },
+    {
+      "id": 7,
+      "name": "Divino",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/b/b7/SeasonalRank7-1.png"
+    },
+    {
+      "id": 8,
+      "name": "Imortal",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/f/f2/SeasonalRankTop0.png"
+    },
+    {
+      "id": 9,
+      "name": "Imortal",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/a/ad/SeasonalRankTop2.png"
+    },
+    {
+      "id": 10,
+      "name": "Imortal",
+      "urlImage": "https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8e/SeasonalRankTop3.png"
+    }
+  ]
