@@ -1,0 +1,168 @@
+<div class="bg-[#2A2634] p-8 rounded-lg shadow-2xl shadow-black">
+    <div class="grid grid-cols-2">
+
+        <div>
+            <div class="pb-7">
+                <p class="pb-1">Nome</p>
+                <p class="font-black">{{ ad.name }}</p>
+            </div>
+            <div class="pb-7">
+                <p class="pb-1">Tempo de jogo</p>
+                <p class="font-black">{{ ad.experience }}</p>
+            </div>
+        </div>
+
+        <div *ngIf="api$ | async as api ; else loading" class="p-2 ">
+            <!-- Elos Valorant -->
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="ad.idGame == 12">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloVal[ad.elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloVal[ad.elo].urlImage }}" alt="">
+            </div>
+            <!-- Elos LOL -->
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="ad.idGame == 8">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloLol[ad.elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloLol[ad.elo].urlImage }}" alt="">
+            </div>
+            <!-- Elos CS -->
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="ad.idGame == 4">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloCS[ad.elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloCS[ad.elo].urlImage }}" alt="">
+            </div>
+            <!-- Elos APEX -->
+            <div class="text-center flex justify-center items-center flex-col" *ngIf="ad.idGame == 3">
+                <p class="font-semibold text-[#E1D55D]">{{ arrEloApex[ad.elo].name }}</p>
+                <img class="w-24 m-2" src="{{ arrEloApex[ad.elo].urlImage }}" alt="">
+            </div>
+        </div>
+        <ng-template #loading>
+            <div>
+                <app-loading></app-loading>
+            </div>
+        </ng-template>
+
+    </div>
+
+    <div class="flex">
+        <div class="w-1/2 pb-7">
+            <p class="pb-1">Disponibilidade</p>
+            <p class="font-black">{{ad.availabilityIn}}h - {{ad.availabilityOut}}h</p>
+        </div>
+        <div class="w-1/2 pb-7">
+            <p class="pb-1">Chamada de áudio?</p>
+            <!-- <p  class="font-black"
+                [ngClass]="{'text-green-400': (voice.innerText == 'Sim'), 'text-red-400': (voice.innerText == 'Não')}"
+                #voice>
+                Sim
+            </p> -->
+            <p class="font-black text-green-400" *ngIf="ad.voice == true">Sim</p>
+            <p class="font-black text-red-400" *ngIf="ad.voice !== true">Não</p>
+        </div>
+    </div>
+    <div class="w-full flex justify-center pb-7">
+        <div class="flex gap-0.5 font-bold">
+            <div class="cursor-pointer relative">
+                <label for="check-1">
+                    <input  type="checkbox" 
+                            id="check-1" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[0] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[0] == '1'
+                            }"  
+                            name="week1"
+                            ngModel/>
+                    <p class="p-week">D</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-2">
+                    <input  type="checkbox" 
+                            id="check-2" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[1] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[1] == '1'
+                            }"  
+                            name="week2"
+                            ngModel/>
+                    <p class="p-week">S</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-3">
+                    <input  type="checkbox" 
+                            id="check-3" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[2] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[2] == '1'
+                            }"                               
+                            name="week3"
+                            ngModel/>
+                    <p class="p-week">T</p>
+                </label>
+            </div>           
+            <div class="cursor-pointer relative">
+                <label for="check-4">
+                    <input  type="checkbox" 
+                            id="check-4" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[3] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[3] == '1'
+                            }"  
+                            name="week4"
+                            ngModel/>
+                    <p class="p-week">Q</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-5">
+                    <div  type="checkbox" 
+                            id="check-5" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[4] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[4] == '1'
+                            }"  
+                            name="week5"
+                            ngModel></div>
+                    <p class="p-week">Q</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-6">
+                    <input  type="checkbox" 
+                            id="check-6" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[5] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[5] == '1'
+                            }"  
+                            name="week6"
+                            ngModel/>
+                    <p class="p-week">S</p>
+                </label>
+            </div>
+            <div class="cursor-pointer relative">
+                <label for="check-7">
+                    <input  type="checkbox" 
+                            id="check-7" 
+                            class="week-style"
+                            [ngClass]="{
+                                '': decimalToBinario(ad.week)[6] == '0' || decimalToBinario(ad.week)[1] == '', 
+                                'bg-violet-500': decimalToBinario(ad.week)[6] == '1'
+                            }"  
+                            name="week7"
+                            ngModel/>
+                    <p class="p-week">S</p>
+                </label>
+            </div>
+        </div>
+    </div>
+    <button class="w-full justify-center flex bg-violet-500 hover:bg-violet-700  p-3 px-5 rounded-md lg:gap-3 gap-1 items-center duration-300"
+            (click)="getDuo(ad.discord)">
+        <img class="lg:w-5 w-3" src="./assets/images/game-controller.svg" alt=""> 
+        Conectar
+    </button>
+</div>

@@ -1,0 +1,46 @@
+[
+    {
+        "name" : "Alisson Antunes",
+        "experience": 2,
+        "idGame" : 12, 
+        "elo": 3,
+        "availabilityIn": 18,
+        "availabilityOut": 20,
+        "voice": true,
+        "week": 0,
+        "discord": "Alisson#0000"
+    },
+    {
+        "name" : "Alisson Antunes",
+        "experience": 3,
+        "idGame" : 8, 
+        "elo": 3,
+        "availabilityIn": 18,
+        "availabilityOut": 20,
+        "voice": true,
+        "week": 0,
+        "discord": "Alisson#0000"
+    },
+    {
+        "name" : "Alisson Antunes",
+        "experience": 4,
+        "idGame" : 4, 
+        "elo": 3,
+        "availabilityIn": 18,
+        "availabilityOut": 20,
+        "voice": true,
+        "week": 0,
+        "discord": "Alisson#0000"
+    },
+    {
+        "name" : "Alisson Antunes",
+        "experience": 4,
+        "idGame" : 3, 
+        "elo": 3,
+        "availabilityIn": 18,
+        "availabilityOut": 20,
+        "voice": true,
+        "week": 0,
+        "discord": "Alisson#0000"
+    }
+]

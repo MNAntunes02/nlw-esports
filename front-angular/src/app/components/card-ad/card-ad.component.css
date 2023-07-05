@@ -1,0 +1,7 @@
+.week-style{
+    @apply appearance-none bg-zinc-900 w-9 h-11 p-0  rounded-md;;
+}
+
+.p-week{
+    @apply absolute left-3 top-3;
+}
