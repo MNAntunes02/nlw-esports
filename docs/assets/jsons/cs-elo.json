@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "name": "Prata I",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Prata II",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Prata III",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Prata IV",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Prata de Elite",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Prata de Elite Mestre",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Ouro I",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Ouro II",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ouro III",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Ouro Mestre",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup10.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Mestre Guardião I",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup11.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Mestre Guardião II",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup12.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Mestre Guardião Elite",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup13.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Distinto Mestre Guardião",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup14.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Águia Lendária",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup15.jpg"
+    },
+    {
+      "id": 16,
+      "name": " Águia Lendária Mestre",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup16.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Mestre Supremo de Primeira Classe",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup17.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Global",
+      "urlImage": "https://cdn.ligadosgames.com/imagens/skillgroup18.jpg"
+    }
+]
